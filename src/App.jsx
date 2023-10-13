@@ -2,14 +2,13 @@ import { useState } from 'react';
 import './App.css';
 import React from 'react';
 import { Icon } from './Icon';
-// import line from '../img/line.svg';
-// import block from '../img/block.svg';
 
 const Store = () => {
- const [position, setPosition] = useState(true);
+ const [position, setPosition] = useState({position:true});
 
-  function toggle() {
-    setPosition(position = !position)
+  const toggle = () => {
+    console.log(Object.values(position)[0]);
+    setPosition(({position}) => ({position : !position}));
   }
 
   const products = [{
@@ -46,7 +45,7 @@ const Store = () => {
 
   return (
     <>
-      <IconSwitch icon={position ? 'line' : 'block'} onSwitch = {toggle} />
+      <IconSwitch icon={Object.values(position)[0] ? 'line' : 'block'} onSwitch = {toggle} />
       <CardsView cards={products} />
       <ListView items={products} />
     </>
@@ -54,8 +53,7 @@ const Store = () => {
 }
 
 const IconSwitch = ({icon, onSwitch}) => {
-  //onSwitch;
-   //const sw = () => console.log(onSwitch)
+  console.log(icon)
   return (
     <button onClick={onSwitch}>
       <Icon name={icon} />
