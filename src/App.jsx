@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import './App.css';
 import React from 'react';
-import line from '../img/line.svg';
-import block from '../img/block.svg'
+import { Icon } from './Icon';
+// import line from '../img/line.svg';
+// import block from '../img/block.svg';
 
 const Store = () => {
  const [state, setPosition] = useState(true);
@@ -45,7 +46,7 @@ const Store = () => {
 
   return (
     <>
-      <IconSwitch icon={state ? line : block} onSwitch = {state} />
+      <IconSwitch icon={state ? 'line' : 'block'} onSwitch = {state} />
       <CardsView cards={products} />
       <ListView items={products} />
     </>
@@ -55,7 +56,7 @@ const Store = () => {
 const IconSwitch = (icon, onSwitch) => {
   const sw = () => console.log(onSwitch)
   return (
-    <img onClick={sw} src={icon}></img>
+    <Icon name={icon} onClick={sw}/>
   )
 }
 const CardsView = (cards) => {
