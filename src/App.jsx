@@ -6,10 +6,10 @@ import { Icon } from './Icon';
 // import block from '../img/block.svg';
 
 const Store = () => {
- const [state, setPosition] = useState(true);
+ const [position, setPosition] = useState(true);
 
   function toggle() {
-    setPosition(!state)
+    setPosition(!position)
   }
 
   const products = [{
@@ -46,7 +46,7 @@ const Store = () => {
 
   return (
     <>
-      <IconSwitch icon={state ? 'line' : 'block'} onSwitch = {state} />
+      <IconSwitch icon={position ? 'line' : 'block'} onSwitch = {position} />
       <CardsView cards={products} />
       <ListView items={products} />
     </>
