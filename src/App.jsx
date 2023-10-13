@@ -26,7 +26,7 @@ const Store = () => {
 const IconSwitch = ({icon, onSwitch}) => {
   console.log(icon)
   return (
-    <button onClick={onSwitch}>
+    <button onClick={onSwitch} className = 'button'>
       <Icon name={icon} />
     </button>
   )
