@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import './App.css';
 import React from 'react';
-//@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+import line from '../img/line.svg';
+import block from '../img/block.svg'
 
 const Store = () => {
  const [state, setPosition] = useState(true);
@@ -44,7 +45,7 @@ const Store = () => {
 
   return (
     <>
-      <IconSwitch icon={state ? "view_list" : "view_module"} onSwitch = {state} />
+      <IconSwitch icon={state ? line : block} onSwitch = {state} />
       <CardsView cards={products} />
       <ListView items={products} />
     </>
