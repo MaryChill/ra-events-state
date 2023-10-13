@@ -9,7 +9,7 @@ const Store = () => {
  const [position, setPosition] = useState(true);
 
   function toggle() {
-    setPosition(!position)
+    setPosition(position = !position)
   }
 
   const products = [{
@@ -46,7 +46,7 @@ const Store = () => {
 
   return (
     <>
-      <IconSwitch icon={position ? 'line' : 'block'} onSwitch = {position} />
+      <IconSwitch icon={position ? 'line' : 'block'} onSwitch = {toggle} />
       <CardsView cards={products} />
       <ListView items={products} />
     </>
@@ -54,9 +54,12 @@ const Store = () => {
 }
 
 const IconSwitch = ({icon, onSwitch}) => {
-  const sw = () => console.log(onSwitch)
+  //onSwitch;
+   //const sw = () => console.log(onSwitch)
   return (
-    <Icon name={icon} onClick={sw}/>
+    <button onClick={onSwitch}>
+      <Icon name={icon} />
+    </button>
   )
 }
 const CardsView = (cards) => {
