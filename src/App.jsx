@@ -46,9 +46,9 @@ const Store = () => {
 
   return (
     <>
-      <IconSwitch icon=({position ? 'line' : 'block'} onSwitch = {position}) />
-      <CardsView cards=({products}) />
-      <ListView items=({products}) />
+      <IconSwitch icon={position ? 'line' : 'block'} onSwitch = {position} />
+      <CardsView cards={products} />
+      <ListView items={products} />
     </>
   )
 }
@@ -56,13 +56,13 @@ const Store = () => {
 const IconSwitch = (icon, onSwitch) => {
   const sw = () => console.log(onSwitch)
   return (
-    <Icon name=({icon}) onClick=({sw})/>
+    <Icon name={icon} onClick={sw}/>
   )
 }
-const CardsView = ({cards}) => {
+const CardsView = (cards) => {
   return (
     Object.keys(cards).map((el, index) => (
-      <ShopCard (card={el} key={index})/>
+      <ShopCard card={el} key={index}/>
     ))
   )
 }
