@@ -1,22 +1,17 @@
 import React from 'react';
+import './ListView.css'
 
 const ShopItem = ({ card }) => {
-    console.log(card)
     return (
       <div className='item'>
-        <p>{card.name}</p>
-        <p>{card.price}</p>
-        <p>{card.color}</p>
-        <img src={card.img} />
+        <img src={card.img} className='item_img'/>
+        <p className='item_p bold'>{card.name}</p>
+        <p className='item_p small'>{card.color}</p>
+        <p className='item_p color'>${card.price}</p>
       </div>
     )
   } 
   
 export const ListView = ({ items }) => {
-    console.log(items)
-    return (
-        items.map((el, index) => {
-            <ShopItem card={el} key={index} />
-        })
-    )
+    return items.map((el, index) =>  <ShopItem card={el} key={index} />)
   }

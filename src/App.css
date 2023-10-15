@@ -1,0 +1,38 @@
+.box-nav {
+  display: flex;
+  justify-content: end;
+  padding: 20px;
+}
+.box-nav button {
+  border: none;
+  background-color: white;
+}
+.box-line {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.box-block {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.bold {
+  font-size: 25px;
+}
+.small {
+  color: gray;
+}
+.color {
+  color: red;
+}
+.item_img {
+  width: 300px;
+}
+.img-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

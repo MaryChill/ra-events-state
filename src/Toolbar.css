@@ -1,0 +1,16 @@
+.box-nav-filter {
+    justify-content: start;
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+  }
+.unselected{
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+}
+.selected {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
